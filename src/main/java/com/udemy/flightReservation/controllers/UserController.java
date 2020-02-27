@@ -50,7 +50,7 @@ public class UserController {
 			userRepository.save(user);
 			map.addAttribute("msg", "Registration completed Successfully!!");
 		} else {
-			//map.addAttribute(user);
+			map.addAttribute("user",user);
 			map.addAttribute("msg", "Opps! password is mismatched Please enter again..");
 			return "/login/register";
 		}
